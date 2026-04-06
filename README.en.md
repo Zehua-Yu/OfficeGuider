@@ -6,6 +6,10 @@ OfficeGuider models **office action sequences** as a **ordering problem**: it ru
 
 > The Python package still lives under `backend/smartflow/` for compatibility. Environment variables often use the `SMARTFLOW_*` prefix.
 
+## Screenshot
+
+![OfficeGuider web console](interface.png)
+
 ---
 
 ## Contributing

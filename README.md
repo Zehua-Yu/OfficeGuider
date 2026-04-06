@@ -8,6 +8,10 @@
 
 > Python 包目录仍为 `backend/smartflow/`，与历史代码兼容；环境变量前缀多为 `SMARTFLOW_*`。
 
+## 界面预览
+
+![OfficeGuider Web 控制台](interface.png)
+
 ---
 
 ## 功能概览
