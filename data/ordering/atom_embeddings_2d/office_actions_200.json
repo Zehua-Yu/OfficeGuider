@@ -1,0 +1,1406 @@
+{
+  "version": 1,
+  "description": "200 office actions with 2D coords for VON",
+  "atoms": {
+    "sf_act_0001": {
+      "display_name": "打开「Q1 销售报表」",
+      "x": 0.214187,
+      "y": -0.037999,
+      "complexity": 0.384,
+      "est_duration_sec": 124
+    },
+    "sf_act_0002": {
+      "display_name": "打开「Q2 预算表」",
+      "x": 0.243807,
+      "y": 0.021203,
+      "complexity": 0.908,
+      "est_duration_sec": 67
+    },
+    "sf_act_0003": {
+      "display_name": "打开「客户 A 合同」",
+      "x": 0.235132,
+      "y": -0.02243,
+      "complexity": 0.336,
+      "est_duration_sec": 242
+    },
+    "sf_act_0004": {
+      "display_name": "审阅「客户 B 报价单」",
+      "x": 0.217052,
+      "y": 5e-06,
+      "complexity": 0.702,
+      "est_duration_sec": 259
+    },
+    "sf_act_0005": {
+      "display_name": "审阅「项目 Alpha 甘特图」",
+      "x": 0.244103,
+      "y": 0.040804,
+      "complexity": 0.838,
+      "est_duration_sec": 33
+    },
+    "sf_act_0006": {
+      "display_name": "审阅「项目 Beta 需求文档」",
+      "x": 0.300923,
+      "y": 0.059638,
+      "complexity": 0.439,
+      "est_duration_sec": 95
+    },
+    "sf_act_0007": {
+      "display_name": "修订「部门周报」",
+      "x": 0.321747,
+      "y": 0.041327,
+      "complexity": 0.229,
+      "est_duration_sec": 71
+    },
+    "sf_act_0008": {
+      "display_name": "修订「会议纪要」",
+      "x": 0.320575,
+      "y": 0.073741,
+      "complexity": 0.836,
+      "est_duration_sec": 336
+    },
+    "sf_act_0009": {
+      "display_name": "修订「采购申请」",
+      "x": 0.302286,
+      "y": 0.114719,
+      "complexity": 0.472,
+      "est_duration_sec": 262
+    },
+    "sf_act_0010": {
+      "display_name": "导出「发票扫描件」",
+      "x": 0.331443,
+      "y": 0.098118,
+      "complexity": 0.882,
+      "est_duration_sec": 272
+    },
+    "sf_act_0011": {
+      "display_name": "导出「报销单」",
+      "x": 0.326306,
+      "y": 0.064372,
+      "complexity": 0.344,
+      "est_duration_sec": 152
+    },
+    "sf_act_0012": {
+      "display_name": "导出「入职清单」",
+      "x": 0.280366,
+      "y": 0.091664,
+      "complexity": 0.236,
+      "est_duration_sec": 147
+    },
+    "sf_act_0013": {
+      "display_name": "合并「培训材料」",
+      "x": 0.328107,
+      "y": 0.114796,
+      "complexity": 0.465,
+      "est_duration_sec": 118
+    },
+    "sf_act_0014": {
+      "display_name": "合并「合规检查表」",
+      "x": 0.301133,
+      "y": 0.173311,
+      "complexity": 0.701,
+      "est_duration_sec": 286
+    },
+    "sf_act_0015": {
+      "display_name": "合并「数据看板」",
+      "x": 0.295263,
+      "y": 0.16965,
+      "complexity": 0.289,
+      "est_duration_sec": 189
+    },
+    "sf_act_0016": {
+      "display_name": "拆分「API 文档」",
+      "x": 0.361824,
+      "y": 0.175604,
+      "complexity": 0.623,
+      "est_duration_sec": 318
+    },
+    "sf_act_0017": {
+      "display_name": "拆分「接口 Mock」",
+      "x": 0.350488,
+      "y": 0.199684,
+      "complexity": 0.345,
+      "est_duration_sec": 43
+    },
+    "sf_act_0018": {
+      "display_name": "拆分「测试用例集」",
+      "x": 0.308015,
+      "y": 0.17231,
+      "complexity": 0.329,
+      "est_duration_sec": 426
+    },
+    "sf_act_0019": {
+      "display_name": "同步至云盘「发布说明」",
+      "x": 0.351938,
+      "y": 0.189413,
+      "complexity": 0.707,
+      "est_duration_sec": 196
+    },
+    "sf_act_0020": {
+      "display_name": "同步至云盘「用户手册」",
+      "x": 0.353385,
+      "y": 0.21433,
+      "complexity": 0.375,
+      "est_duration_sec": 134
+    },
+    "sf_act_0021": {
+      "display_name": "同步至云盘「版本说明 v2.3」",
+      "x": 0.322876,
+      "y": 0.212035,
+      "complexity": 0.647,
+      "est_duration_sec": 407
+    },
+    "sf_act_0022": {
+      "display_name": "发送给「设计稿 Figma」",
+      "x": 0.307024,
+      "y": 0.22194,
+      "complexity": 0.998,
+      "est_duration_sec": 244
+    },
+    "sf_act_0023": {
+      "display_name": "发送给「原型链接」",
+      "x": 0.27882,
+      "y": 0.221504,
+      "complexity": 0.243,
+      "est_duration_sec": 294
+    },
+    "sf_act_0024": {
+      "display_name": "发送给「竞品分析」",
+      "x": 0.330768,
+      "y": 0.264783,
+      "complexity": 0.204,
+      "est_duration_sec": 190
+    },
+    "sf_act_0025": {
+      "display_name": "归档至「市场调研」",
+      "x": 0.342332,
+      "y": 0.286529,
+      "complexity": 0.975,
+      "est_duration_sec": 392
+    },
+    "sf_act_0026": {
+      "display_name": "归档至「KPI 看板」",
+      "x": 0.258198,
+      "y": 0.314937,
+      "complexity": 0.729,
+      "est_duration_sec": 256
+    },
+    "sf_act_0027": {
+      "display_name": "归档至「OKR 文档」",
+      "x": 0.272667,
+      "y": 0.321502,
+      "complexity": 0.245,
+      "est_duration_sec": 213
+    },
+    "sf_act_0028": {
+      "display_name": "从…恢复版本「招聘 JD」",
+      "x": 0.281075,
+      "y": 0.359321,
+      "complexity": 0.894,
+      "est_duration_sec": 141
+    },
+    "sf_act_0029": {
+      "display_name": "从…恢复版本「面试记录」",
+      "x": 0.277703,
+      "y": 0.309921,
+      "complexity": 0.926,
+      "est_duration_sec": 396
+    },
+    "sf_act_0030": {
+      "display_name": "从…恢复版本「Offer 审批流」",
+      "x": 0.253845,
+      "y": 0.359159,
+      "complexity": 0.668,
+      "est_duration_sec": 94
+    },
+    "sf_act_0031": {
+      "display_name": "为…设置权限「差旅申请」",
+      "x": 0.282727,
+      "y": 0.363386,
+      "complexity": 0.812,
+      "est_duration_sec": 253
+    },
+    "sf_act_0032": {
+      "display_name": "为…设置权限「会议室预定」",
+      "x": 0.212983,
+      "y": 0.358119,
+      "complexity": 0.167,
+      "est_duration_sec": 420
+    },
+    "sf_act_0033": {
+      "display_name": "为…设置权限「访客登记」",
+      "x": 0.273912,
+      "y": 0.410408,
+      "complexity": 0.411,
+      "est_duration_sec": 54
+    },
+    "sf_act_0034": {
+      "display_name": "转换格式「资产领用单」",
+      "x": 0.264009,
+      "y": 0.431037,
+      "complexity": 0.223,
+      "est_duration_sec": 234
+    },
+    "sf_act_0035": {
+      "display_name": "转换格式「IT 工单」",
+      "x": 0.188949,
+      "y": 0.427233,
+      "complexity": 0.801,
+      "est_duration_sec": 84
+    },
+    "sf_act_0036": {
+      "display_name": "转换格式「VPN 申请」",
+      "x": 0.21058,
+      "y": 0.421152,
+      "complexity": 0.375,
+      "est_duration_sec": 396
+    },
+    "sf_act_0037": {
+      "display_name": "提取目录「邮箱别名」",
+      "x": 0.195069,
+      "y": 0.404554,
+      "complexity": 0.608,
+      "est_duration_sec": 337
+    },
+    "sf_act_0038": {
+      "display_name": "提取目录「共享盘目录」",
+      "x": 0.165499,
+      "y": 0.42263,
+      "complexity": 0.996,
+      "est_duration_sec": 303
+    },
+    "sf_act_0039": {
+      "display_name": "提取目录「知识库词条」",
+      "x": 0.172186,
+      "y": 0.448806,
+      "complexity": 0.253,
+      "est_duration_sec": 124
+    },
+    "sf_act_0040": {
+      "display_name": "批注「Wiki 页面」",
+      "x": 0.151474,
+      "y": 0.463778,
+      "complexity": 0.346,
+      "est_duration_sec": 122
+    },
+    "sf_act_0041": {
+      "display_name": "批注「Jira 工单」",
+      "x": 0.116967,
+      "y": 0.476104,
+      "complexity": 0.345,
+      "est_duration_sec": 410
+    },
+    "sf_act_0042": {
+      "display_name": "批注「Confluence 空间」",
+      "x": 0.166507,
+      "y": 0.439759,
+      "complexity": 0.352,
+      "est_duration_sec": 311
+    },
+    "sf_act_0043": {
+      "display_name": "锁定「Slack 频道摘要」",
+      "x": 0.100927,
+      "y": 0.452708,
+      "complexity": 0.945,
+      "est_duration_sec": 270
+    },
+    "sf_act_0044": {
+      "display_name": "锁定「Teams 录制」",
+      "x": 0.107274,
+      "y": 0.512466,
+      "complexity": 0.836,
+      "est_duration_sec": 110
+    },
+    "sf_act_0045": {
+      "display_name": "锁定「客户邮件线程」",
+      "x": 0.062524,
+      "y": 0.491282,
+      "complexity": 0.51,
+      "est_duration_sec": 226
+    },
+    "sf_act_0046": {
+      "display_name": "解锁「供应商对账单」",
+      "x": 0.098059,
+      "y": 0.517281,
+      "complexity": 0.987,
+      "est_duration_sec": 71
+    },
+    "sf_act_0047": {
+      "display_name": "解锁「库存快照」",
+      "x": 0.056578,
+      "y": 0.49667,
+      "complexity": 0.882,
+      "est_duration_sec": 134
+    },
+    "sf_act_0048": {
+      "display_name": "解锁「物流跟踪号」",
+      "x": 0.023911,
+      "y": 0.511016,
+      "complexity": 0.509,
+      "est_duration_sec": 147
+    },
+    "sf_act_0049": {
+      "display_name": "对比「合同盖章扫描」",
+      "x": 0.012713,
+      "y": 0.554064,
+      "complexity": 0.527,
+      "est_duration_sec": 392
+    },
+    "sf_act_0050": {
+      "display_name": "对比「法务意见书」",
+      "x": 0.020517,
+      "y": 0.488788,
+      "complexity": 0.999,
+      "est_duration_sec": 381
+    },
+    "sf_act_0051": {
+      "display_name": "对比「专利交底书」",
+      "x": 0.03752,
+      "y": 0.562841,
+      "complexity": 0.871,
+      "est_duration_sec": 100
+    },
+    "sf_act_0052": {
+      "display_name": "套用模板「商标续展」",
+      "x": -0.017873,
+      "y": 0.509264,
+      "complexity": 0.491,
+      "est_duration_sec": 55
+    },
+    "sf_act_0053": {
+      "display_name": "套用模板「财务报表」",
+      "x": -0.043343,
+      "y": 0.573853,
+      "complexity": 0.375,
+      "est_duration_sec": 359
+    },
+    "sf_act_0054": {
+      "display_name": "套用模板「审计底稿」",
+      "x": -0.054391,
+      "y": 0.531157,
+      "complexity": 0.964,
+      "est_duration_sec": 448
+    },
+    "sf_act_0055": {
+      "display_name": "填充数据「税务申报表」",
+      "x": -0.063632,
+      "y": 0.556492,
+      "complexity": 0.282,
+      "est_duration_sec": 155
+    },
+    "sf_act_0056": {
+      "display_name": "填充数据「银行流水」",
+      "x": -0.048051,
+      "y": 0.546464,
+      "complexity": 0.611,
+      "est_duration_sec": 344
+    },
+    "sf_act_0057": {
+      "display_name": "填充数据「付款凭证」",
+      "x": -0.13856,
+      "y": 0.547376,
+      "complexity": 0.577,
+      "est_duration_sec": 388
+    },
+    "sf_act_0058": {
+      "display_name": "校验「收款确认」",
+      "x": -0.148232,
+      "y": 0.57741,
+      "complexity": 0.218,
+      "est_duration_sec": 108
+    },
+    "sf_act_0059": {
+      "display_name": "校验「项目验收单」",
+      "x": -0.131006,
+      "y": 0.553861,
+      "complexity": 0.35,
+      "est_duration_sec": 80
+    },
+    "sf_act_0060": {
+      "display_name": "校验「变更请求」",
+      "x": -0.125233,
+      "y": 0.518222,
+      "complexity": 0.655,
+      "est_duration_sec": 290
+    },
+    "sf_act_0061": {
+      "display_name": "发布到「风险登记册」",
+      "x": -0.18081,
+      "y": 0.543281,
+      "complexity": 0.594,
+      "est_duration_sec": 423
+    },
+    "sf_act_0062": {
+      "display_name": "发布到「应急预案」",
+      "x": -0.215921,
+      "y": 0.551323,
+      "complexity": 0.353,
+      "est_duration_sec": 196
+    },
+    "sf_act_0063": {
+      "display_name": "发布到「SOP 文档」",
+      "x": -0.196441,
+      "y": 0.514843,
+      "complexity": 0.419,
+      "est_duration_sec": 346
+    },
+    "sf_act_0064": {
+      "display_name": "撤回提交「检查清单」",
+      "x": -0.262264,
+      "y": 0.523696,
+      "complexity": 0.999,
+      "est_duration_sec": 448
+    },
+    "sf_act_0065": {
+      "display_name": "撤回提交「巡检记录」",
+      "x": -0.280055,
+      "y": 0.499649,
+      "complexity": 0.375,
+      "est_duration_sec": 422
+    },
+    "sf_act_0066": {
+      "display_name": "撤回提交「设备维保」",
+      "x": -0.233228,
+      "y": 0.547876,
+      "complexity": 0.464,
+      "est_duration_sec": 96
+    },
+    "sf_act_0067": {
+      "display_name": "预约「许可证续费」",
+      "x": -0.25469,
+      "y": 0.528129,
+      "complexity": 0.67,
+      "est_duration_sec": 445
+    },
+    "sf_act_0068": {
+      "display_name": "预约「域名 DNS」",
+      "x": -0.286653,
+      "y": 0.466158,
+      "complexity": 0.845,
+      "est_duration_sec": 156
+    },
+    "sf_act_0069": {
+      "display_name": "预约「SSL 证书」",
+      "x": -0.303348,
+      "y": 0.533711,
+      "complexity": 0.264,
+      "est_duration_sec": 78
+    },
+    "sf_act_0070": {
+      "display_name": "取消「备份任务」",
+      "x": -0.365149,
+      "y": 0.495301,
+      "complexity": 0.381,
+      "est_duration_sec": 284
+    },
+    "sf_act_0071": {
+      "display_name": "取消「灾备演练」",
+      "x": -0.333419,
+      "y": 0.459161,
+      "complexity": 0.689,
+      "est_duration_sec": 141
+    },
+    "sf_act_0072": {
+      "display_name": "取消「日志归档」",
+      "x": -0.368662,
+      "y": 0.50652,
+      "complexity": 0.869,
+      "est_duration_sec": 69
+    },
+    "sf_act_0073": {
+      "display_name": "转发「权限审计」",
+      "x": -0.390553,
+      "y": 0.446842,
+      "complexity": 0.153,
+      "est_duration_sec": 354
+    },
+    "sf_act_0074": {
+      "display_name": "转发「账号开通」",
+      "x": -0.389923,
+      "y": 0.435679,
+      "complexity": 0.78,
+      "est_duration_sec": 262
+    },
+    "sf_act_0075": {
+      "display_name": "转发「离职交接」",
+      "x": -0.422865,
+      "y": 0.404919,
+      "complexity": 0.214,
+      "est_duration_sec": 401
+    },
+    "sf_act_0076": {
+      "display_name": "抄送「工位分配」",
+      "x": -0.400669,
+      "y": 0.436631,
+      "complexity": 0.859,
+      "est_duration_sec": 275
+    },
+    "sf_act_0077": {
+      "display_name": "抄送「名片印制」",
+      "x": -0.476733,
+      "y": 0.39144,
+      "complexity": 0.412,
+      "est_duration_sec": 408
+    },
+    "sf_act_0078": {
+      "display_name": "抄送「团建预算」",
+      "x": -0.44016,
+      "y": 0.437795,
+      "complexity": 0.914,
+      "est_duration_sec": 118
+    },
+    "sf_act_0079": {
+      "display_name": "置顶「年会方案」",
+      "x": -0.49881,
+      "y": 0.364298,
+      "complexity": 0.813,
+      "est_duration_sec": 401
+    },
+    "sf_act_0080": {
+      "display_name": "置顶「礼品采购」",
+      "x": -0.500816,
+      "y": 0.392316,
+      "complexity": 0.281,
+      "est_duration_sec": 421
+    },
+    "sf_act_0081": {
+      "display_name": "置顶「供应商评估」",
+      "x": -0.478326,
+      "y": 0.406812,
+      "complexity": 0.839,
+      "est_duration_sec": 400
+    },
+    "sf_act_0082": {
+      "display_name": "生成副本「合同续签」",
+      "x": -0.559272,
+      "y": 0.373169,
+      "complexity": 0.432,
+      "est_duration_sec": 421
+    },
+    "sf_act_0083": {
+      "display_name": "生成副本「价格谈判纪要」",
+      "x": -0.510411,
+      "y": 0.368386,
+      "complexity": 0.839,
+      "est_duration_sec": 142
+    },
+    "sf_act_0084": {
+      "display_name": "生成副本「样品确认」",
+      "x": -0.52449,
+      "y": 0.292426,
+      "complexity": 0.891,
+      "est_duration_sec": 391
+    },
+    "sf_act_0085": {
+      "display_name": "链接到「质检报告」",
+      "x": -0.582113,
+      "y": 0.333139,
+      "complexity": 0.541,
+      "est_duration_sec": 158
+    },
+    "sf_act_0086": {
+      "display_name": "链接到「出货单」",
+      "x": -0.548227,
+      "y": 0.269582,
+      "complexity": 0.17,
+      "est_duration_sec": 111
+    },
+    "sf_act_0087": {
+      "display_name": "链接到「退货单」",
+      "x": -0.597044,
+      "y": 0.303631,
+      "complexity": 0.972,
+      "est_duration_sec": 147
+    },
+    "sf_act_0088": {
+      "display_name": "嵌入「对账函」",
+      "x": -0.582922,
+      "y": 0.249125,
+      "complexity": 0.984,
+      "est_duration_sec": 255
+    },
+    "sf_act_0089": {
+      "display_name": "嵌入「催款函」",
+      "x": -0.569506,
+      "y": 0.208623,
+      "complexity": 0.975,
+      "est_duration_sec": 105
+    },
+    "sf_act_0090": {
+      "display_name": "嵌入「律师函草稿」",
+      "x": -0.577501,
+      "y": 0.202472,
+      "complexity": 0.242,
+      "est_duration_sec": 213
+    },
+    "sf_act_0091": {
+      "display_name": "替换引用「NDA 模板」",
+      "x": -0.605517,
+      "y": 0.187779,
+      "complexity": 0.665,
+      "est_duration_sec": 245
+    },
+    "sf_act_0092": {
+      "display_name": "替换引用「保密协议」",
+      "x": -0.641706,
+      "y": 0.189891,
+      "complexity": 0.367,
+      "est_duration_sec": 328
+    },
+    "sf_act_0093": {
+      "display_name": "替换引用「竞业条款」",
+      "x": -0.680516,
+      "y": 0.198537,
+      "complexity": 0.608,
+      "est_duration_sec": 332
+    },
+    "sf_act_0094": {
+      "display_name": "打开「股权协议」",
+      "x": -0.628823,
+      "y": 0.158535,
+      "complexity": 0.46,
+      "est_duration_sec": 59
+    },
+    "sf_act_0095": {
+      "display_name": "打开「期权授予」",
+      "x": -0.64195,
+      "y": 0.111381,
+      "complexity": 0.417,
+      "est_duration_sec": 386
+    },
+    "sf_act_0096": {
+      "display_name": "打开「股东会决议」",
+      "x": -0.643791,
+      "y": 0.088777,
+      "complexity": 0.413,
+      "est_duration_sec": 202
+    },
+    "sf_act_0097": {
+      "display_name": "审阅「董事会材料」",
+      "x": -0.674821,
+      "y": 0.067916,
+      "complexity": 0.258,
+      "est_duration_sec": 207
+    },
+    "sf_act_0098": {
+      "display_name": "审阅「投资人月报」",
+      "x": -0.636775,
+      "y": 0.077709,
+      "complexity": 0.917,
+      "est_duration_sec": 289
+    },
+    "sf_act_0099": {
+      "display_name": "审阅「融资 BP」",
+      "x": -0.692259,
+      "y": 0.046386,
+      "complexity": 0.15,
+      "est_duration_sec": 151
+    },
+    "sf_act_0100": {
+      "display_name": "修订「路演 PPT」",
+      "x": -0.685603,
+      "y": 0.027768,
+      "complexity": 0.706,
+      "est_duration_sec": 225
+    },
+    "sf_act_0101": {
+      "display_name": "修订「媒体通稿」",
+      "x": -0.687602,
+      "y": -0.022904,
+      "complexity": 0.552,
+      "est_duration_sec": 408
+    },
+    "sf_act_0102": {
+      "display_name": "修订「官网公告」",
+      "x": -0.661587,
+      "y": -0.04796,
+      "complexity": 0.222,
+      "est_duration_sec": 246
+    },
+    "sf_act_0103": {
+      "display_name": "导出「客服话术」",
+      "x": -0.676233,
+      "y": -0.056399,
+      "complexity": 0.846,
+      "est_duration_sec": 345
+    },
+    "sf_act_0104": {
+      "display_name": "导出「工单 SLA」",
+      "x": -0.673943,
+      "y": -0.087042,
+      "complexity": 0.319,
+      "est_duration_sec": 40
+    },
+    "sf_act_0105": {
+      "display_name": "导出「满意度调研」",
+      "x": -0.708371,
+      "y": -0.088898,
+      "complexity": 0.872,
+      "est_duration_sec": 61
+    },
+    "sf_act_0106": {
+      "display_name": "合并「NPS 报告」",
+      "x": -0.694284,
+      "y": -0.098498,
+      "complexity": 0.315,
+      "est_duration_sec": 322
+    },
+    "sf_act_0107": {
+      "display_name": "合并「用户画像」",
+      "x": -0.686654,
+      "y": -0.151382,
+      "complexity": 0.708,
+      "est_duration_sec": 32
+    },
+    "sf_act_0108": {
+      "display_name": "合并「漏斗分析」",
+      "x": -0.664172,
+      "y": -0.131344,
+      "complexity": 0.241,
+      "est_duration_sec": 209
+    },
+    "sf_act_0109": {
+      "display_name": "拆分「留存报表」",
+      "x": -0.707503,
+      "y": -0.138361,
+      "complexity": 0.59,
+      "est_duration_sec": 51
+    },
+    "sf_act_0110": {
+      "display_name": "拆分「AB 实验结果」",
+      "x": -0.698238,
+      "y": -0.169161,
+      "complexity": 0.538,
+      "est_duration_sec": 367
+    },
+    "sf_act_0111": {
+      "display_name": "拆分「埋点方案」",
+      "x": -0.660643,
+      "y": -0.179981,
+      "complexity": 0.656,
+      "est_duration_sec": 429
+    },
+    "sf_act_0112": {
+      "display_name": "同步至云盘「隐私政策」",
+      "x": -0.637886,
+      "y": -0.231915,
+      "complexity": 0.761,
+      "est_duration_sec": 242
+    },
+    "sf_act_0113": {
+      "display_name": "同步至云盘「Cookie 提示」",
+      "x": -0.637181,
+      "y": -0.258919,
+      "complexity": 0.913,
+      "est_duration_sec": 342
+    },
+    "sf_act_0114": {
+      "display_name": "同步至云盘「GDPR 导出」",
+      "x": -0.659356,
+      "y": -0.303717,
+      "complexity": 0.36,
+      "est_duration_sec": 298
+    },
+    "sf_act_0115": {
+      "display_name": "发送给「数据脱敏」",
+      "x": -0.629048,
+      "y": -0.30431,
+      "complexity": 0.683,
+      "est_duration_sec": 145
+    },
+    "sf_act_0116": {
+      "display_name": "发送给「主数据同步」",
+      "x": -0.67638,
+      "y": -0.344552,
+      "complexity": 0.381,
+      "est_duration_sec": 164
+    },
+    "sf_act_0117": {
+      "display_name": "发送给「ETL 任务」",
+      "x": -0.630918,
+      "y": -0.377546,
+      "complexity": 0.347,
+      "est_duration_sec": 321
+    },
+    "sf_act_0118": {
+      "display_name": "归档至「数仓分区」",
+      "x": -0.608459,
+      "y": -0.40447,
+      "complexity": 0.496,
+      "est_duration_sec": 258
+    },
+    "sf_act_0119": {
+      "display_name": "归档至「指标口径」",
+      "x": -0.621849,
+      "y": -0.413815,
+      "complexity": 0.507,
+      "est_duration_sec": 410
+    },
+    "sf_act_0120": {
+      "display_name": "归档至「血缘文档」",
+      "x": -0.597826,
+      "y": -0.395212,
+      "complexity": 0.878,
+      "est_duration_sec": 352
+    },
+    "sf_act_0121": {
+      "display_name": "从…恢复版本「质量规则」",
+      "x": -0.602873,
+      "y": -0.470588,
+      "complexity": 0.449,
+      "est_duration_sec": 346
+    },
+    "sf_act_0122": {
+      "display_name": "从…恢复版本「告警订阅」",
+      "x": -0.553096,
+      "y": -0.414683,
+      "complexity": 0.506,
+      "est_duration_sec": 344
+    },
+    "sf_act_0123": {
+      "display_name": "从…恢复版本「值班表」",
+      "x": -0.565075,
+      "y": -0.462264,
+      "complexity": 0.337,
+      "est_duration_sec": 122
+    },
+    "sf_act_0124": {
+      "display_name": "为…设置权限「on-call 记录」",
+      "x": -0.560628,
+      "y": -0.527413,
+      "complexity": 0.436,
+      "est_duration_sec": 315
+    },
+    "sf_act_0125": {
+      "display_name": "为…设置权限「事故复盘」",
+      "x": -0.549225,
+      "y": -0.535365,
+      "complexity": 0.547,
+      "est_duration_sec": 84
+    },
+    "sf_act_0126": {
+      "display_name": "为…设置权限「RCA 报告」",
+      "x": -0.517222,
+      "y": -0.564845,
+      "complexity": 0.485,
+      "est_duration_sec": 267
+    },
+    "sf_act_0127": {
+      "display_name": "转换格式「改进项跟踪」",
+      "x": -0.549635,
+      "y": -0.533595,
+      "complexity": 0.265,
+      "est_duration_sec": 224
+    },
+    "sf_act_0128": {
+      "display_name": "转换格式「供应商 SLA」",
+      "x": -0.531961,
+      "y": -0.572255,
+      "complexity": 0.33,
+      "est_duration_sec": 167
+    },
+    "sf_act_0129": {
+      "display_name": "转换格式「采购比价」",
+      "x": -0.458661,
+      "y": -0.589357,
+      "complexity": 0.789,
+      "est_duration_sec": 379
+    },
+    "sf_act_0130": {
+      "display_name": "提取目录「招标书」",
+      "x": -0.48236,
+      "y": -0.629753,
+      "complexity": 0.166,
+      "est_duration_sec": 257
+    },
+    "sf_act_0131": {
+      "display_name": "提取目录「投标书」",
+      "x": -0.404955,
+      "y": -0.624421,
+      "complexity": 0.703,
+      "est_duration_sec": 358
+    },
+    "sf_act_0132": {
+      "display_name": "提取目录「中标通知」",
+      "x": -0.414651,
+      "y": -0.607666,
+      "complexity": 0.957,
+      "est_duration_sec": 114
+    },
+    "sf_act_0133": {
+      "display_name": "批注「合同归档」",
+      "x": -0.446459,
+      "y": -0.670855,
+      "complexity": 0.257,
+      "est_duration_sec": 311
+    },
+    "sf_act_0134": {
+      "display_name": "批注「印章申请」",
+      "x": -0.38374,
+      "y": -0.680085,
+      "complexity": 0.745,
+      "est_duration_sec": 352
+    },
+    "sf_act_0135": {
+      "display_name": "批注「用印扫描」",
+      "x": -0.395691,
+      "y": -0.662836,
+      "complexity": 0.786,
+      "est_duration_sec": 78
+    },
+    "sf_act_0136": {
+      "display_name": "锁定「快递寄送」",
+      "x": -0.323332,
+      "y": -0.64753,
+      "complexity": 0.242,
+      "est_duration_sec": 41
+    },
+    "sf_act_0137": {
+      "display_name": "锁定「签收确认」",
+      "x": -0.343207,
+      "y": -0.683195,
+      "complexity": 0.964,
+      "est_duration_sec": 197
+    },
+    "sf_act_0138": {
+      "display_name": "锁定「资产报废」",
+      "x": -0.289793,
+      "y": -0.743342,
+      "complexity": 0.737,
+      "est_duration_sec": 293
+    },
+    "sf_act_0139": {
+      "display_name": "解锁「盘点表」",
+      "x": -0.317236,
+      "y": -0.699011,
+      "complexity": 0.873,
+      "est_duration_sec": 282
+    },
+    "sf_act_0140": {
+      "display_name": "解锁「调拨单」",
+      "x": -0.293683,
+      "y": -0.692823,
+      "complexity": 0.815,
+      "est_duration_sec": 176
+    },
+    "sf_act_0141": {
+      "display_name": "解锁「借用登记」",
+      "x": -0.24668,
+      "y": -0.751924,
+      "complexity": 0.58,
+      "est_duration_sec": 173
+    },
+    "sf_act_0142": {
+      "display_name": "对比「归还检查」",
+      "x": -0.190194,
+      "y": -0.725126,
+      "complexity": 0.24,
+      "est_duration_sec": 434
+    },
+    "sf_act_0143": {
+      "display_name": "对比「会议室设备」",
+      "x": -0.184171,
+      "y": -0.733249,
+      "complexity": 0.751,
+      "est_duration_sec": 213
+    },
+    "sf_act_0144": {
+      "display_name": "对比「投影仪报修」",
+      "x": -0.152843,
+      "y": -0.730219,
+      "complexity": 0.38,
+      "est_duration_sec": 369
+    },
+    "sf_act_0145": {
+      "display_name": "套用模板「网络报障」",
+      "x": -0.144715,
+      "y": -0.775954,
+      "complexity": 0.52,
+      "est_duration_sec": 337
+    },
+    "sf_act_0146": {
+      "display_name": "套用模板「软件安装」",
+      "x": -0.142237,
+      "y": -0.752927,
+      "complexity": 0.856,
+      "est_duration_sec": 66
+    },
+    "sf_act_0147": {
+      "display_name": "套用模板「许可证分配」",
+      "x": -0.068858,
+      "y": -0.807229,
+      "complexity": 0.545,
+      "est_duration_sec": 286
+    },
+    "sf_act_0148": {
+      "display_name": "填充数据「密码重置」",
+      "x": -0.084513,
+      "y": -0.829349,
+      "complexity": 0.873,
+      "est_duration_sec": 106
+    },
+    "sf_act_0149": {
+      "display_name": "填充数据「MFA 绑定」",
+      "x": -0.073096,
+      "y": -0.77195,
+      "complexity": 0.439,
+      "est_duration_sec": 400
+    },
+    "sf_act_0150": {
+      "display_name": "填充数据「VPN 故障」",
+      "x": -0.009019,
+      "y": -0.817023,
+      "complexity": 0.159,
+      "est_duration_sec": 428
+    },
+    "sf_act_0151": {
+      "display_name": "校验「邮箱迁移」",
+      "x": -0.033151,
+      "y": -0.784075,
+      "complexity": 0.565,
+      "est_duration_sec": 348
+    },
+    "sf_act_0152": {
+      "display_name": "校验「日历共享」",
+      "x": 0.040498,
+      "y": -0.791766,
+      "complexity": 0.567,
+      "est_duration_sec": 363
+    },
+    "sf_act_0153": {
+      "display_name": "校验「通讯录同步」",
+      "x": 0.018052,
+      "y": -0.826664,
+      "complexity": 0.738,
+      "est_duration_sec": 159
+    },
+    "sf_act_0154": {
+      "display_name": "发布到「群组创建」",
+      "x": 0.082575,
+      "y": -0.806675,
+      "complexity": 0.601,
+      "est_duration_sec": 209
+    },
+    "sf_act_0155": {
+      "display_name": "发布到「公告发布」",
+      "x": 0.121227,
+      "y": -0.817403,
+      "complexity": 0.747,
+      "est_duration_sec": 144
+    },
+    "sf_act_0156": {
+      "display_name": "发布到「问卷发放」",
+      "x": 0.107197,
+      "y": -0.832728,
+      "complexity": 0.314,
+      "est_duration_sec": 80
+    },
+    "sf_act_0157": {
+      "display_name": "撤回提交「投票统计」",
+      "x": 0.155492,
+      "y": -0.779099,
+      "complexity": 0.307,
+      "est_duration_sec": 121
+    },
+    "sf_act_0158": {
+      "display_name": "撤回提交「抽奖结果」",
+      "x": 0.176875,
+      "y": -0.778981,
+      "complexity": 0.98,
+      "est_duration_sec": 250
+    },
+    "sf_act_0159": {
+      "display_name": "撤回提交「活动签到」",
+      "x": 0.186247,
+      "y": -0.824957,
+      "complexity": 0.315,
+      "est_duration_sec": 126
+    },
+    "sf_act_0160": {
+      "display_name": "预约「照片整理」",
+      "x": 0.203357,
+      "y": -0.827097,
+      "complexity": 0.604,
+      "est_duration_sec": 145
+    },
+    "sf_act_0161": {
+      "display_name": "预约「视频剪辑」",
+      "x": 0.292238,
+      "y": -0.778368,
+      "complexity": 0.743,
+      "est_duration_sec": 83
+    },
+    "sf_act_0162": {
+      "display_name": "预约「海报导出」",
+      "x": 0.308936,
+      "y": -0.776956,
+      "complexity": 0.892,
+      "est_duration_sec": 271
+    },
+    "sf_act_0163": {
+      "display_name": "取消「印刷下单」",
+      "x": 0.30202,
+      "y": -0.773762,
+      "complexity": 0.307,
+      "est_duration_sec": 52
+    },
+    "sf_act_0164": {
+      "display_name": "取消「物料签收」",
+      "x": 0.364582,
+      "y": -0.762741,
+      "complexity": 0.849,
+      "est_duration_sec": 198
+    },
+    "sf_act_0165": {
+      "display_name": "取消「展台搭建」",
+      "x": 0.319843,
+      "y": -0.741756,
+      "complexity": 0.196,
+      "est_duration_sec": 93
+    },
+    "sf_act_0166": {
+      "display_name": "转发「演讲稿」",
+      "x": 0.38333,
+      "y": -0.758153,
+      "complexity": 0.995,
+      "est_duration_sec": 80
+    },
+    "sf_act_0167": {
+      "display_name": "转发「同传安排」",
+      "x": 0.423582,
+      "y": -0.723506,
+      "complexity": 0.822,
+      "est_duration_sec": 125
+    },
+    "sf_act_0168": {
+      "display_name": "转发「酒店确认」",
+      "x": 0.42807,
+      "y": -0.724732,
+      "complexity": 0.526,
+      "est_duration_sec": 391
+    },
+    "sf_act_0169": {
+      "display_name": "抄送「行程单」",
+      "x": 0.488991,
+      "y": -0.724323,
+      "complexity": 0.678,
+      "est_duration_sec": 286
+    },
+    "sf_act_0170": {
+      "display_name": "抄送「签证材料」",
+      "x": 0.492181,
+      "y": -0.660153,
+      "complexity": 0.327,
+      "est_duration_sec": 119
+    },
+    "sf_act_0171": {
+      "display_name": "抄送「机票改签」",
+      "x": 0.508629,
+      "y": -0.709838,
+      "complexity": 0.298,
+      "est_duration_sec": 62
+    },
+    "sf_act_0172": {
+      "display_name": "置顶「费用分摊」",
+      "x": 0.47844,
+      "y": -0.672053,
+      "complexity": 0.655,
+      "est_duration_sec": 152
+    },
+    "sf_act_0173": {
+      "display_name": "置顶「预算追加」",
+      "x": 0.518761,
+      "y": -0.636485,
+      "complexity": 0.748,
+      "est_duration_sec": 221
+    },
+    "sf_act_0174": {
+      "display_name": "置顶「付款审批」",
+      "x": 0.576811,
+      "y": -0.603347,
+      "complexity": 0.82,
+      "est_duration_sec": 293
+    },
+    "sf_act_0175": {
+      "display_name": "生成副本「发票核验」",
+      "x": 0.595828,
+      "y": -0.586068,
+      "complexity": 0.511,
+      "est_duration_sec": 259
+    },
+    "sf_act_0176": {
+      "display_name": "生成副本「税务备案」",
+      "x": 0.615371,
+      "y": -0.570887,
+      "complexity": 0.853,
+      "est_duration_sec": 60
+    },
+    "sf_act_0177": {
+      "display_name": "生成副本「汇算清缴」",
+      "x": 0.596949,
+      "y": -0.601061,
+      "complexity": 0.787,
+      "est_duration_sec": 269
+    },
+    "sf_act_0178": {
+      "display_name": "链接到「工资条」",
+      "x": 0.626346,
+      "y": -0.597159,
+      "complexity": 0.735,
+      "est_duration_sec": 324
+    },
+    "sf_act_0179": {
+      "display_name": "链接到「社保增减」",
+      "x": 0.697696,
+      "y": -0.547849,
+      "complexity": 0.57,
+      "est_duration_sec": 64
+    },
+    "sf_act_0180": {
+      "display_name": "链接到「公积金调整」",
+      "x": 0.643917,
+      "y": -0.533465,
+      "complexity": 0.424,
+      "est_duration_sec": 135
+    },
+    "sf_act_0181": {
+      "display_name": "嵌入「劳动合同续签」",
+      "x": 0.665881,
+      "y": -0.470592,
+      "complexity": 0.861,
+      "est_duration_sec": 272
+    },
+    "sf_act_0182": {
+      "display_name": "嵌入「试用期考核」",
+      "x": 0.751863,
+      "y": -0.446492,
+      "complexity": 0.721,
+      "est_duration_sec": 143
+    },
+    "sf_act_0183": {
+      "display_name": "嵌入「晋升提名」",
+      "x": 0.695603,
+      "y": -0.444284,
+      "complexity": 0.55,
+      "est_duration_sec": 304
+    },
+    "sf_act_0184": {
+      "display_name": "替换引用「调薪审批」",
+      "x": 0.781593,
+      "y": -0.468029,
+      "complexity": 0.648,
+      "est_duration_sec": 297
+    },
+    "sf_act_0185": {
+      "display_name": "替换引用「奖金分配」",
+      "x": 0.762888,
+      "y": -0.452466,
+      "complexity": 0.446,
+      "est_duration_sec": 170
+    },
+    "sf_act_0186": {
+      "display_name": "替换引用「期权行权」",
+      "x": 0.791703,
+      "y": -0.367839,
+      "complexity": 0.43,
+      "est_duration_sec": 321
+    },
+    "sf_act_0187": {
+      "display_name": "打开「离职面谈」",
+      "x": 0.774976,
+      "y": -0.337033,
+      "complexity": 0.842,
+      "est_duration_sec": 261
+    },
+    "sf_act_0188": {
+      "display_name": "打开「证明开具」",
+      "x": 0.801396,
+      "y": -0.363198,
+      "complexity": 0.425,
+      "est_duration_sec": 437
+    },
+    "sf_act_0189": {
+      "display_name": "打开「档案转出」",
+      "x": 0.809685,
+      "y": -0.322444,
+      "complexity": 0.99,
+      "est_duration_sec": 306
+    },
+    "sf_act_0190": {
+      "display_name": "审阅「背调授权」",
+      "x": 0.832332,
+      "y": -0.305372,
+      "complexity": 0.309,
+      "est_duration_sec": 182
+    },
+    "sf_act_0191": {
+      "display_name": "审阅「入职 IT 资产」",
+      "x": 0.860233,
+      "y": -0.262808,
+      "complexity": 0.796,
+      "est_duration_sec": 115
+    },
+    "sf_act_0192": {
+      "display_name": "审阅「显示器申领」",
+      "x": 0.85365,
+      "y": -0.212651,
+      "complexity": 0.522,
+      "est_duration_sec": 323
+    },
+    "sf_act_0193": {
+      "display_name": "修订「笔记本归还」",
+      "x": 0.828613,
+      "y": -0.182676,
+      "complexity": 0.668,
+      "est_duration_sec": 131
+    },
+    "sf_act_0194": {
+      "display_name": "修订「门禁权限」",
+      "x": 0.839933,
+      "y": -0.189789,
+      "complexity": 0.619,
+      "est_duration_sec": 69
+    },
+    "sf_act_0195": {
+      "display_name": "修订「停车月卡」",
+      "x": 0.914172,
+      "y": -0.133841,
+      "complexity": 0.542,
+      "est_duration_sec": 79
+    },
+    "sf_act_0196": {
+      "display_name": "导出「餐补发放」",
+      "x": 0.908046,
+      "y": -0.139742,
+      "complexity": 0.759,
+      "est_duration_sec": 244
+    },
+    "sf_act_0197": {
+      "display_name": "导出「团建报销」",
+      "x": 0.869175,
+      "y": -0.085314,
+      "complexity": 0.983,
+      "est_duration_sec": 132
+    },
+    "sf_act_0198": {
+      "display_name": "导出「加班调休」",
+      "x": 0.896364,
+      "y": -0.093657,
+      "complexity": 0.934,
+      "est_duration_sec": 243
+    },
+    "sf_act_0199": {
+      "display_name": "合并「年假结转」",
+      "x": 0.926697,
+      "y": -0.027271,
+      "complexity": 0.385,
+      "est_duration_sec": 362
+    },
+    "sf_act_0200": {
+      "display_name": "合并「育儿假申请」",
+      "x": 0.892751,
+      "y": 0.00647,
+      "complexity": 0.582,
+      "est_duration_sec": 375
+    }
+  }
+}

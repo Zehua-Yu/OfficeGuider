@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smartflow.local/schemas/office_session_log/v2",
+  "title": "OfficeGuider 办公会话日志（复杂模式 v2）",
+  "type": "object",
+  "required": ["schema_version", "sessions"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "2.0"
+    },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "catalog": {
+      "type": "object",
+      "description": "可选：数据集内原子能力说明，便于离线对齐",
+      "properties": {
+        "atom_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "entity_registry": {
+      "type": "array",
+      "description": "会话中引用的业务实体（文档、表格、附件等）",
+      "items": { "$ref": "#/$defs/entity_record" }
+    },
+    "sessions": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/session" }
+    },
+    "gold_flows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/gold_flow" }
+    },
+    "policies": {
+      "type": "object",
+      "description": "策略片段：可运行性/合规校验用",
+      "properties": {
+        "forbidden_atom_pairs": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": { "type": "string" }
+          }
+        },
+        "required_schema_by_atom": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "entity_record": {
+      "type": "object",
+      "required": ["entity_id", "kind"],
+      "properties": {
+        "entity_id": { "type": "string" },
+        "kind": {
+          "type": "string",
+          "enum": ["document", "spreadsheet", "attachment", "generated_artifact", "email_draft", "code_snippet"]
+        },
+        "mime": { "type": "string" },
+        "size_bytes": { "type": "integer", "minimum": 0 },
+        "sensitivity": {
+          "type": "string",
+          "enum": ["public", "internal", "confidential", "restricted"]
+        },
+        "path_stub": { "type": "string" },
+        "checksum_stub": { "type": "string" },
+        "metadata": { "type": "object", "additionalProperties": true }
+      }
+    },
+    "session": {
+      "type": "object",
+      "required": ["session_id", "user_id", "events"],
+      "properties": {
+        "session_id": { "type": "string" },
+        "user_id": { "type": "string" },
+        "workspace": {
+          "type": "object",
+          "properties": {
+            "org_unit": { "type": "string" },
+            "project_id": { "type": "string" },
+            "locale": { "type": "string" },
+            "clearance_level": {
+              "type": "string",
+              "enum": ["unclassified", "internal", "confidential", "restricted"]
+            },
+            "network_zone": {
+              "type": "string",
+              "enum": ["offline", "intranet", "dmz", "internet"]
+            }
+          }
+        },
+        "client": {
+          "type": "object",
+          "properties": {
+            "app": { "type": "string" },
+            "app_version": { "type": "string" },
+            "os": { "type": "string" },
+            "device_class": {
+              "type": "string",
+              "enum": ["desktop", "laptop", "tablet", "terminal"]
+            }
+          }
+        },
+        "intent_tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "session_goal": { "type": "string" },
+        "session_metrics": {
+          "type": "object",
+          "properties": {
+            "interrupt_count": { "type": "integer", "minimum": 0 },
+            "total_duration_ms": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "events": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/event" }
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "required": ["event_id", "seq", "ts", "atom"],
+      "properties": {
+        "event_id": { "type": "string" },
+        "seq": { "type": "integer", "minimum": 0 },
+        "ts": { "type": "string" },
+        "atom": { "type": "string" },
+        "phase": {
+          "type": "string",
+          "enum": ["prepare", "execute", "review", "export", "rollback"]
+        },
+        "payload": { "type": "object", "additionalProperties": true },
+        "io_context": {
+          "type": "object",
+          "properties": {
+            "inputs": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/io_ref" }
+            },
+            "outputs": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/io_ref" }
+            }
+          }
+        },
+        "depends_on": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "前置 event_id，表达因果/编排依赖"
+        },
+        "metrics": {
+          "type": "object",
+          "properties": {
+            "duration_ms": { "type": "integer", "minimum": 0 },
+            "queue_wait_ms": { "type": "integer", "minimum": 0 },
+            "retry_count": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "outcome": {
+          "type": "string",
+          "enum": ["success", "partial", "failed", "skipped", "cancelled"]
+        },
+        "error": {
+          "type": "object",
+          "properties": {
+            "code": { "type": "string" },
+            "message_stub": { "type": "string" }
+          }
+        },
+        "risk_flags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["pii", "external_api", "macro", "cross_border", "privilege_escalation"]
+          }
+        },
+        "user_feedback": {
+          "type": "object",
+          "properties": {
+            "rating": { "type": "number", "minimum": -1, "maximum": 1 },
+            "note_stub": { "type": "string" }
+          }
+        }
+      }
+    },
+    "io_ref": {
+      "type": "object",
+      "required": ["entity_id", "role"],
+      "properties": {
+        "entity_id": { "type": "string" },
+        "role": {
+          "type": "string",
+          "enum": ["primary", "attachment", "template", "schema_ref", "sidecar"]
+        }
+      }
+    },
+    "gold_flow": {
+      "type": "object",
+      "required": ["flow_id", "atoms"],
+      "properties": {
+        "flow_id": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "atoms": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "preconditions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "postconditions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "alternative_branches": {
+          "type": "array",
+          "description": "可选：从某步可分叉的合法子链",
+          "items": {
+            "type": "object",
+            "required": ["from_atom", "branch_atoms"],
+            "properties": {
+              "from_atom": { "type": "string" },
+              "branch_atoms": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "when": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

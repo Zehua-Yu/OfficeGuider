@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smartflow.local/schemas/wps_table_v1",
+  "title": "WPS 表格类输出（增强模式：多表/列定义/溯源）",
+  "type": "object",
+  "required": ["version", "sheets"],
+  "properties": {
+    "version": { "const": "wps_table_v1" },
+    "document_meta": {
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "author_stub": { "type": "string" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "locale": { "type": "string" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "description": "AI/流水线溯源，供审计",
+      "properties": {
+        "pipeline_id": { "type": "string" },
+        "model_stub": { "type": "string" },
+        "session_id": { "type": "string" },
+        "atom_chain": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "sheets": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/sheet" }
+    },
+    "validation_report": {
+      "type": "object",
+      "properties": {
+        "passed": { "type": "boolean" },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["severity", "code"],
+            "properties": {
+              "severity": { "type": "string", "enum": ["info", "warn", "error"] },
+              "code": { "type": "string" },
+              "cell_ref": { "type": "string" },
+              "message_stub": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "meta": { "type": "object", "additionalProperties": true }
+  },
+  "$defs": {
+    "column_def": {
+      "type": "object",
+      "required": ["key", "dtype"],
+      "properties": {
+        "key": { "type": "string" },
+        "dtype": {
+          "type": "string",
+          "enum": ["string", "number", "integer", "boolean", "date", "null"]
+        },
+        "required": { "type": "boolean" },
+        "max_length": { "type": "integer", "minimum": 1 },
+        "pattern": { "type": "string" }
+      }
+    },
+    "sheet": {
+      "type": "object",
+      "required": ["sheet_id", "columns", "rows"],
+      "properties": {
+        "sheet_id": { "type": "string" },
+        "name": { "type": "string" },
+        "columns": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/column_def" }
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id"],
+            "properties": {
+              "id": { "type": "string" },
+              "cells": {
+                "type": "array",
+                "description": "与 columns 顺序对齐或按 key 在 meta.cell_map 中给出",
+                "items": { "type": ["string", "number", "integer", "boolean", "null"] }
+              },
+              "cell_map": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": ["string", "number", "integer", "boolean", "null"]
+                }
+              },
+              "merge_hint": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "minItems": 4,
+                  "maxItems": 4,
+                  "items": { "type": "integer", "minimum": 0 },
+                  "description": "[r0,c0,r1,c1] 合并区域（可选）"
+                }
+              }
+            }
+          }
+        },
+        "frozen_rows": { "type": "integer", "minimum": 0 },
+        "frozen_cols": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

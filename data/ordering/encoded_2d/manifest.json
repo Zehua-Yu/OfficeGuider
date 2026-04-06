@@ -1,0 +1,26 @@
+{
+  "encoder": "tfidf_svd",
+  "text_format": "arrow",
+  "encode_field": "ground_truth",
+  "pca_seed": 42,
+  "full_dim": 48,
+  "pca_explained_variance_ratio": [
+    0.3176750477423528,
+    0.16744214699398852
+  ],
+  "train_points": 400,
+  "test_points": 100,
+  "files": {
+    "train_2d": "data/ordering/encoded_2d/train_2d.jsonl",
+    "test_2d": "data/ordering/encoded_2d/test_2d.jsonl"
+  },
+  "tfidf": {
+    "analyzer": "char_wb",
+    "ngram_range": [
+      2,
+      5
+    ]
+  },
+  "truncated_svd_dim": 48,
+  "tfidf_feature_count": 548
+}

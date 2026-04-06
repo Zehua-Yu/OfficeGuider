@@ -1,0 +1,3 @@
+# 序列句向量 + 降维（与 API 依赖分离，按需安装）
+sentence-transformers>=2.2.0
+scikit-learn>=1.3.0

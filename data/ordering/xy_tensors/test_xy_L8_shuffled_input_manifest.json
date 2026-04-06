@@ -1,0 +1,24 @@
+{
+  "shape": [
+    100,
+    8,
+    2
+  ],
+  "dtype": "float32",
+  "split": "test",
+  "num_sequences": 100,
+  "seq_len": 8,
+  "field": "shuffled_input",
+  "atoms_2d_json": "data/ordering/atom_embeddings_2d/atoms_2d.json",
+  "source_jsonl": "data/ordering/test.jsonl",
+  "pad_value": [
+    0.0,
+    0.0
+  ],
+  "chain_len_min": 3,
+  "chain_len_max": 8,
+  "files": {
+    "xy": "data/ordering/xy_tensors/test_xy_L8_shuffled_input.npy",
+    "mask": "data/ordering/xy_tensors/test_xy_L8_shuffled_input_mask.npy"
+  }
+}

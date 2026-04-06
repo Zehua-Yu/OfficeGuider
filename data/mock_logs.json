@@ -1,0 +1,358 @@
+{
+  "schema_version": "2.0",
+  "generated_at": "2026-04-02T08:00:00Z",
+  "catalog": {
+    "atom_ids": [
+      "PDF_Import",
+      "PDF_to_Word",
+      "Summary_Generation",
+      "Excel_Import",
+      "Table_Normalize",
+      "Data_Validate",
+      "Chart_Generate",
+      "Export_DOCX",
+      "Code_Generate",
+      "Schema_Check"
+    ]
+  },
+  "entity_registry": [
+    {
+      "entity_id": "ent-doc-001",
+      "kind": "document",
+      "mime": "application/pdf",
+      "size_bytes": 2400000,
+      "sensitivity": "internal",
+      "path_stub": "/vault/proj-alpha/Q1/report_v3.pdf",
+      "metadata": { "pages": 42, "language": "zh-CN" }
+    },
+    {
+      "entity_id": "ent-xlsx-002",
+      "kind": "spreadsheet",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size_bytes": 890000,
+      "sensitivity": "confidential",
+      "path_stub": "/vault/proj-alpha/budget/forecast.xlsx"
+    },
+    {
+      "entity_id": "ent-artifact-003",
+      "kind": "generated_artifact",
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 120000,
+      "sensitivity": "internal",
+      "path_stub": "/tmp/smartflow/out/report_v3_editable.docx"
+    },
+    {
+      "entity_id": "ent-table-json-004",
+      "kind": "generated_artifact",
+      "mime": "application/json",
+      "size_bytes": 45000,
+      "sensitivity": "internal",
+      "path_stub": "/tmp/smartflow/normalized/table_norm.json"
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "sess-001",
+      "user_id": "u_demo",
+      "workspace": {
+        "org_unit": "规划处",
+        "project_id": "proj-alpha",
+        "locale": "zh-CN",
+        "clearance_level": "internal",
+        "network_zone": "intranet"
+      },
+      "client": {
+        "app": "WPS_Office",
+        "app_version": "12.1.0",
+        "os": "darwin",
+        "device_class": "laptop"
+      },
+      "intent_tags": ["文档流转", "摘要", "归档"],
+      "session_goal": "将季度 PDF 转为可编辑稿并生成管理层摘要，导出 Word",
+      "session_metrics": { "interrupt_count": 1, "total_duration_ms": 520000 },
+      "events": [
+        {
+          "event_id": "evt-001-a",
+          "seq": 0,
+          "ts": "2026-04-01T09:00:00Z",
+          "atom": "PDF_Import",
+          "phase": "prepare",
+          "payload": { "path": "report_v3.pdf", "ocr": false },
+          "io_context": {
+            "inputs": [],
+            "outputs": [{ "entity_id": "ent-doc-001", "role": "primary" }]
+          },
+          "depends_on": [],
+          "metrics": { "duration_ms": 4200, "queue_wait_ms": 0, "retry_count": 0 },
+          "outcome": "success",
+          "risk_flags": []
+        },
+        {
+          "event_id": "evt-001-b",
+          "seq": 1,
+          "ts": "2026-04-01T09:02:18Z",
+          "atom": "PDF_to_Word",
+          "phase": "execute",
+          "payload": { "layout_preserve": true, "lang_hint": "zh-CN" },
+          "io_context": {
+            "inputs": [{ "entity_id": "ent-doc-001", "role": "primary" }],
+            "outputs": [{ "entity_id": "ent-artifact-003", "role": "primary" }]
+          },
+          "depends_on": ["evt-001-a"],
+          "metrics": { "duration_ms": 118000, "queue_wait_ms": 12000, "retry_count": 0 },
+          "outcome": "success",
+          "risk_flags": ["macro"]
+        },
+        {
+          "event_id": "evt-001-c",
+          "seq": 2,
+          "ts": "2026-04-01T09:05:02Z",
+          "atom": "Summary_Generation",
+          "phase": "execute",
+          "payload": { "max_tokens": 512, "style": "executive_bullet" },
+          "io_context": {
+            "inputs": [{ "entity_id": "ent-artifact-003", "role": "primary" }],
+            "outputs": []
+          },
+          "depends_on": ["evt-001-b"],
+          "metrics": { "duration_ms": 62000, "queue_wait_ms": 8000, "retry_count": 1 },
+          "outcome": "partial",
+          "risk_flags": ["external_api"],
+          "user_feedback": { "rating": 0.3, "note_stub": "术语过多" }
+        },
+        {
+          "event_id": "evt-001-d",
+          "seq": 3,
+          "ts": "2026-04-01T09:08:44Z",
+          "atom": "Export_DOCX",
+          "phase": "export",
+          "payload": { "embed_summary": true },
+          "io_context": {
+            "inputs": [{ "entity_id": "ent-artifact-003", "role": "primary" }],
+            "outputs": []
+          },
+          "depends_on": ["evt-001-c"],
+          "metrics": { "duration_ms": 15000, "queue_wait_ms": 0, "retry_count": 0 },
+          "outcome": "success",
+          "risk_flags": []
+        }
+      ]
+    },
+    {
+      "session_id": "sess-002",
+      "user_id": "u_demo",
+      "workspace": {
+        "org_unit": "财经组",
+        "project_id": "proj-alpha",
+        "locale": "zh-CN",
+        "clearance_level": "confidential",
+        "network_zone": "intranet"
+      },
+      "client": {
+        "app": "WPS_Spreadsheet",
+        "app_version": "12.1.0",
+        "os": "win32",
+        "device_class": "desktop"
+      },
+      "intent_tags": ["表格清洗", "可视化", "对内汇报"],
+      "session_goal": "导入预测表、按 WPS 表结构规范化并校验后出图",
+      "session_metrics": { "interrupt_count": 0, "total_duration_ms": 380000 },
+      "events": [
+        {
+          "event_id": "evt-002-a",
+          "seq": 0,
+          "ts": "2026-04-01T10:00:00Z",
+          "atom": "Excel_Import",
+          "phase": "prepare",
+          "payload": { "sheet": "Forecast", "header_row": 2 },
+          "io_context": {
+            "inputs": [],
+            "outputs": [{ "entity_id": "ent-xlsx-002", "role": "primary" }]
+          },
+          "depends_on": [],
+          "metrics": { "duration_ms": 5100, "queue_wait_ms": 0, "retry_count": 0 },
+          "outcome": "success",
+          "risk_flags": []
+        },
+        {
+          "event_id": "evt-002-b",
+          "seq": 1,
+          "ts": "2026-04-01T10:05:22Z",
+          "atom": "Table_Normalize",
+          "phase": "execute",
+          "payload": { "schema": "wps_table_v1", "strict_types": true },
+          "io_context": {
+            "inputs": [{ "entity_id": "ent-xlsx-002", "role": "primary" }],
+            "outputs": [{ "entity_id": "ent-table-json-004", "role": "primary" }]
+          },
+          "depends_on": ["evt-002-a"],
+          "metrics": { "duration_ms": 28000, "queue_wait_ms": 3000, "retry_count": 0 },
+          "outcome": "success",
+          "risk_flags": []
+        },
+        {
+          "event_id": "evt-002-c",
+          "seq": 2,
+          "ts": "2026-04-01T10:09:10Z",
+          "atom": "Schema_Check",
+          "phase": "review",
+          "payload": { "validator_profile": "wps_table_v1" },
+          "io_context": {
+            "inputs": [{ "entity_id": "ent-table-json-004", "role": "schema_ref" }],
+            "outputs": []
+          },
+          "depends_on": ["evt-002-b"],
+          "metrics": { "duration_ms": 2100, "queue_wait_ms": 0, "retry_count": 0 },
+          "outcome": "success",
+          "risk_flags": []
+        },
+        {
+          "event_id": "evt-002-d",
+          "seq": 3,
+          "ts": "2026-04-01T10:10:05Z",
+          "atom": "Data_Validate",
+          "phase": "execute",
+          "payload": { "ruleset": "finance_forecast_v2", "fail_fast": false },
+          "io_context": {
+            "inputs": [{ "entity_id": "ent-table-json-004", "role": "primary" }],
+            "outputs": []
+          },
+          "depends_on": ["evt-002-c"],
+          "metrics": { "duration_ms": 9500, "queue_wait_ms": 0, "retry_count": 0 },
+          "outcome": "success",
+          "risk_flags": []
+        },
+        {
+          "event_id": "evt-002-e",
+          "seq": 4,
+          "ts": "2026-04-01T10:12:33Z",
+          "atom": "Chart_Generate",
+          "phase": "export",
+          "payload": { "type": "bar", "series_from": "normalized.columns[2:8]" },
+          "io_context": {
+            "inputs": [{ "entity_id": "ent-table-json-004", "role": "primary" }],
+            "outputs": []
+          },
+          "depends_on": ["evt-002-d"],
+          "metrics": { "duration_ms": 22000, "queue_wait_ms": 500, "retry_count": 0 },
+          "outcome": "success",
+          "risk_flags": []
+        }
+      ]
+    },
+    {
+      "session_id": "sess-003",
+      "user_id": "u_field",
+      "workspace": {
+        "org_unit": "外场支持",
+        "project_id": "proj-delta",
+        "locale": "zh-CN",
+        "clearance_level": "restricted",
+        "network_zone": "offline"
+      },
+      "client": {
+        "app": "OfficeGuider_CLI",
+        "app_version": "0.1.0",
+        "os": "linux",
+        "device_class": "terminal"
+      },
+      "intent_tags": ["离线", "代码", "Schema"],
+      "session_goal": "离线环境根据规范生成校验代码并自检 JSON 产物",
+      "session_metrics": { "interrupt_count": 2, "total_duration_ms": 890000 },
+      "events": [
+        {
+          "event_id": "evt-003-a",
+          "seq": 0,
+          "ts": "2026-04-01T14:00:00Z",
+          "atom": "Code_Generate",
+          "phase": "execute",
+          "payload": { "language": "python", "target": "jsonschema_validator" },
+          "io_context": { "inputs": [], "outputs": [] },
+          "depends_on": [],
+          "metrics": { "duration_ms": 180000, "queue_wait_ms": 0, "retry_count": 0 },
+          "outcome": "success",
+          "risk_flags": ["privilege_escalation"]
+        },
+        {
+          "event_id": "evt-003-b",
+          "seq": 1,
+          "ts": "2026-04-01T14:15:00Z",
+          "atom": "Schema_Check",
+          "phase": "review",
+          "payload": { "validator_profile": "wps_table_v1" },
+          "io_context": { "inputs": [], "outputs": [] },
+          "depends_on": ["evt-003-a"],
+          "metrics": { "duration_ms": 800, "queue_wait_ms": 0, "retry_count": 0 },
+          "outcome": "failed",
+          "error": { "code": "E_SCHEMA_MISSING_ROWS", "message_stub": "offline fixture 不完整" },
+          "risk_flags": []
+        },
+        {
+          "event_id": "evt-003-c",
+          "seq": 2,
+          "ts": "2026-04-01T14:16:12Z",
+          "atom": "Table_Normalize",
+          "phase": "rollback",
+          "payload": { "schema": "wps_table_v1", "repair": true },
+          "io_context": { "inputs": [], "outputs": [] },
+          "depends_on": ["evt-003-b"],
+          "metrics": { "duration_ms": 45000, "queue_wait_ms": 0, "retry_count": 0 },
+          "outcome": "success",
+          "risk_flags": []
+        },
+        {
+          "event_id": "evt-003-d",
+          "seq": 3,
+          "ts": "2026-04-01T14:20:00Z",
+          "atom": "Schema_Check",
+          "phase": "review",
+          "payload": { "validator_profile": "wps_table_v1" },
+          "io_context": { "inputs": [], "outputs": [] },
+          "depends_on": ["evt-003-c"],
+          "metrics": { "duration_ms": 600, "queue_wait_ms": 0, "retry_count": 0 },
+          "outcome": "success",
+          "risk_flags": []
+        }
+      ]
+    }
+  ],
+  "gold_flows": [
+    {
+      "flow_id": "gf-doc-01",
+      "name": "doc_summary_pipeline",
+      "description": "PDF 进线 → 可编辑 → 摘要 → 导出",
+      "preconditions": ["has_pdf_source"],
+      "postconditions": ["has_docx_export"],
+      "atoms": ["PDF_Import", "PDF_to_Word", "Summary_Generation", "Export_DOCX"],
+      "alternative_branches": [
+        {
+          "from_atom": "Summary_Generation",
+          "when": "user_prefers_slides",
+          "branch_atoms": ["Chart_Generate", "Export_DOCX"]
+        }
+      ]
+    },
+    {
+      "flow_id": "gf-table-01",
+      "name": "table_chart_pipeline",
+      "description": "表格进线 → 规范化 → Schema 自检 → 业务校验 → 出图",
+      "preconditions": ["has_xlsx"],
+      "postconditions": ["has_chart_or_table_json"],
+      "atoms": [
+        "Excel_Import",
+        "Table_Normalize",
+        "Schema_Check",
+        "Data_Validate",
+        "Chart_Generate"
+      ],
+      "alternative_branches": []
+    }
+  ],
+  "policies": {
+    "forbidden_atom_pairs": [["Chart_Generate", "PDF_Import"]],
+    "required_schema_by_atom": {
+      "Table_Normalize": "wps_table_v1",
+      "Schema_Check": "wps_table_v1"
+    }
+  }
+}

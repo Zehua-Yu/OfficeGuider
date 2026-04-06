@@ -1,0 +1,15 @@
+{
+  "shape": [
+    10000,
+    50,
+    2
+  ],
+  "dtype": "float32",
+  "split": "train+test_concat",
+  "seq_len": 50,
+  "field": "shuffled_input",
+  "files": {
+    "xy": "data/ordering/long_10k_xy_tensors/all_xy_L50_shuffled_input.npy",
+    "mask": "data/ordering/long_10k_xy_tensors/all_xy_L50_shuffled_input_mask.npy"
+  }
+}

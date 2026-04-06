@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-04-03T06:15:01.768143+00:00",
+  "schema_version": "ordering_long_v1",
+  "total": 10000,
+  "chain_len": 50,
+  "train": 8000,
+  "test": 2000,
+  "train_ratio": 0.8,
+  "seed": 20260402,
+  "files": {
+    "train": "data/ordering/long_10k/train.jsonl",
+    "test": "data/ordering/long_10k/test.jsonl"
+  }
+}

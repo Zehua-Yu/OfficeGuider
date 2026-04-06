@@ -1,0 +1,10 @@
+{"atom_id": "Chart_Generate", "text": "Chart_Generate（图表生成）", "x2d": -0.5295364720197517, "y2d": -0.27505529462319556, "embedding_dim_before_pca": 9}
+{"atom_id": "Code_Generate", "text": "Code_Generate（代码生成）", "x2d": -0.5420631219920921, "y2d": -0.2759603620066507, "embedding_dim_before_pca": 9}
+{"atom_id": "Data_Validate", "text": "Data_Validate（数据校验）", "x2d": -0.07389494599890543, "y2d": 0.48700593411208637, "embedding_dim_before_pca": 9}
+{"atom_id": "Excel_Import", "text": "Excel_Import（导入表格）", "x2d": 0.5046325610203728, "y2d": -0.33917725335683463, "embedding_dim_before_pca": 9}
+{"atom_id": "Export_DOCX", "text": "Export_DOCX（导出 DOCX）", "x2d": 0.1798661198955286, "y2d": 0.07891192357661068, "embedding_dim_before_pca": 9}
+{"atom_id": "PDF_Import", "text": "PDF_Import（导入 PDF）", "x2d": 0.5699979841761287, "y2d": -0.35810151154271674, "embedding_dim_before_pca": 9}
+{"atom_id": "PDF_to_Word", "text": "PDF_to_Word（PDF 转 Word）", "x2d": 0.30111608001424744, "y2d": -0.05728600204509237, "embedding_dim_before_pca": 9}
+{"atom_id": "Schema_Check", "text": "Schema_Check（Schema 校验）", "x2d": -0.0010157504025353754, "y2d": 0.5131836176703998, "embedding_dim_before_pca": 9}
+{"atom_id": "Summary_Generation", "text": "Summary_Generation（摘要生成）", "x2d": -0.4457130693045683, "y2d": -0.23077955482702445, "embedding_dim_before_pca": 9}
+{"atom_id": "Table_Normalize", "text": "Table_Normalize（表格规范化）", "x2d": 0.036610614611574804, "y2d": 0.4572585030424171, "embedding_dim_before_pca": 9}

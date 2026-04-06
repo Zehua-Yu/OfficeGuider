@@ -1,0 +1,24 @@
+{
+  "kind": "per_atom_2d",
+  "encoder": "tfidf_svd",
+  "text_format": "arrow",
+  "num_atoms": 10,
+  "pca_seed": 42,
+  "pca_explained_variance_ratio": [
+    0.18480754487536388,
+    0.1455582917806163
+  ],
+  "files": {
+    "atoms_2d_jsonl": "data/ordering/atom_embeddings_2d/atoms_2d.jsonl",
+    "atoms_2d_json": "data/ordering/atom_embeddings_2d/atoms_2d.json"
+  },
+  "tfidf": {
+    "analyzer": "char_wb",
+    "ngram_range": [
+      2,
+      5
+    ]
+  },
+  "truncated_svd_dim": 9,
+  "tfidf_feature_count": 582
+}

@@ -1,0 +1,76 @@
+/* 固定浅色主题，不跟随系统 prefers-color-scheme */
+html {
+  color-scheme: light;
+}
+
+:root {
+  --text-strong: #18181b;
+  --text-h: #18181b;
+  --text: #52525b;
+  --text-muted: #71717a;
+  --text-subtle: #a1a1aa;
+  --bg: #f4f4f5;
+  --bg-elevated: #ffffff;
+  --surface: #ffffff;
+  --border: #e4e4e7;
+  --border-strong: #d4d4d8;
+  --panel: #fafafa;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-muted: #eff6ff;
+  --on-accent: #ffffff;
+  --success: #15803d;
+  --success-muted: #f0fdf4;
+  --warn: #b45309;
+  --danger: #dc2626;
+  --danger-bg: #fef2f2;
+  --code-bg: #27272a;
+  --code-fg: #fafafa;
+  --chip: #f4f4f5;
+  --ring: rgba(37, 99, 235, 0.25);
+
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'PingFang SC',
+    'Hiragino Sans GB',
+    'Microsoft YaHei',
+    sans-serif;
+  line-height: 1.5;
+  color: var(--text-strong);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+input:not([type='checkbox']):not([type='radio']),
+textarea {
+  color: var(--text-strong);
+  background: var(--surface);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* 隐藏滚动条外观，仍可用滚轮 / 触控板 / 触摸滑动 */
+*,
+*::before,
+*::after {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-corner {
+  width: 0;
+  height: 0;
+  display: none;
+}
